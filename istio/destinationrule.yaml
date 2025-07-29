@@ -1,0 +1,9 @@
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: python-app
+spec:
+  host: python-app
+  trafficPolicy:
+    loadBalancer:
+      simple: ROUND_ROBIN
